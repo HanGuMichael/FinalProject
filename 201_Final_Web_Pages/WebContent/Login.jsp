@@ -7,10 +7,22 @@
 <link rel="stylesheet" type="text/css" href="Login.css" />
 <title>Login</title>
 </head>
+
+<script>
+	function LogIn() {
+	  	var request = "Validate?";
+		request += "username=" + document.login.uname;
+		request += "&password=" + document.login.psw;
+		
+		var xhttp = new XMLHttpRequest();
+		xhttp.open("GET", request, true);
+		xhttp.send();
+	}
+</script>
 <body>
 
 	<div id="all">	
-	<form>
+	<form name = "login">
 	  <div class="container">
 	    <label for="uname"><b>Username</b></label>
 	    <input type="text" placeholder="Enter Username" name="uname">

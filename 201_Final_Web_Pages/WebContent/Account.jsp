@@ -7,6 +7,18 @@
 <link rel="stylesheet" type="text/css" href="Account.css" />
 <title>Create Account</title>
 </head>
+<script>
+	function makeAccount() {
+	  	var request = "MakeAccount?";
+		request += "username=" + document.login.uname;
+		request += "&password=" + document.login.psw;
+		request += "&email=" + document.login.eml;
+		
+		var xhttp = new XMLHttpRequest();
+		xhttp.open("GET", request, true);
+		xhttp.send();
+	}
+</script>
 <body>
 
 	<div id="all">	
